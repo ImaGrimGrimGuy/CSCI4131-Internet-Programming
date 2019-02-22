@@ -1,0 +1,76 @@
+nav {
+  background-color: #c8bfff;
+  height: 40px;
+}
+nav a {
+  line-height: 40px;
+  background-color: #9b0000;
+  color: white;
+  text-align: center;
+  border: 5px solid #45009b;
+}
+body {
+  background-color:  #11003f;
+}
+table, th, td {
+  border: 1px solid black;
+}
+th, td {
+  text-align: left;
+}
+th, td {
+  padding: 15px;
+}
+th {
+  background-color: blue;
+  color: white;
+}
+td {
+  background-color:  #00faff;
+  color: black;
+}
+button {
+  background-color: #00ff87;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+#thumbwrap {
+	position:relative;
+	margin:75px auto;
+	width:252px; height:252px;
+}
+thumb img { 
+	border:1px solid #000;
+	margin:3px;
+	float:left;
+}
+thumb span { 
+	position:absolute;
+	visibility:hidden;
+}
+thumb:hover, .thumb:hover span { 
+	visibility:visible;
+	top:0; left:250px; 
+	z-index:1;
+}
+
+
+#map {
+      height: 100%;
+}
+
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}

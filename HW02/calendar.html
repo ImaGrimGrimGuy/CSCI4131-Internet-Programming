@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "utf-8">
+  <title> My Calendar </title>
+  <link rel="stylesheet" type = "text/css" href = ./formatting.css>
+  <script type="text/javascript" src="./javascript.js"></script>
+  <style>
+    td {
+      height: 150px;
+      width: 250px;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="./calendar.html">Schedule</a>
+    <a href="./form.html">Form Input</a>
+    <a href="./myWidgets.html">Widgets</a>
+  </nav>
+  <table>
+    <tr>
+      <th> Mon </th>
+      <td onmouseover  = "showthumbnail('keller.jpg',this)" onmouseout = "hidethumbnail(this)" > 
+           <p> 8:00 - 8:50 AM </p>
+           <p> CSCI 4061 Intro to Operating Systems </p>
+           <p> Discussion </p>
+      </td>
+      <td onmouseover  = "showthumbnail('anderson.jpg',this)" onmouseout = "hidethumbnail(this)"> 
+           <p> 2:30 - 3:45 PM </p>
+           <p> CSCI 4131 Internet Programming </p>
+           <p> Lecture </p>
+      </td>
+      <td onmouseover  = "showthumbnail('bruinicks.jpg',this)" onmouseout = "hidethumbnail(this)">
+           <p> 6:00 - 8:45 PM </p>
+           <p> INET 4061 Data Science I: Fundamentals </p>
+           <p> Lecture </p>
+      </td>
+    </tr>
+    <tr>
+      <th> Tue </th>
+      <td onmouseover  = "showthumbnail('bruinicks.jpg',this)" onmouseout = "hidethumbnail(this)">
+           <p> 9:45 - 11:0 AM </p>
+           <p> CSCI 5801 Software Eng. I </p>
+           <p> Lecture </p>
+      </td>
+      <td onmouseover  = "showthumbnail('bruinicks.jpg',this)" onmouseout = "hidethumbnail(this)">
+           <p> 1:00 - 2:15 PM </p>
+           <p> CSCI 4061 Intro to Operating Systems </p>
+           <p> Lecture </p>
+      </td>
+      <td> <p> - </p>
+      </td>
+    </tr>
+    <tr>
+      <th> Wed </th>
+      <td> <p> - </p>
+      </td>
+      <td onmouseover  = "showthumbnail('anderson.jpg',this)" onmouseout = "hidethumbnail(this)">
+           <p> 2:30 - 3:45 PM </p>
+           <p> CSCI 4131 Internet Programming </p>
+           <p> Lecture </p>
+      </td>
+      <td> <p> - </p>
+      </td>
+    </tr>
+    <tr>
+      <th> Thu </th>
+      <td onmouseover  = "showthumbnail('bruinicks.jpg',this)" onmouseout = "hidethumbnail(this)">
+           <p> 9:45 - 11:0 AM </p>
+           <p> CSCI 5801 Software Eng. I </p>
+           <p> Lecture </p>
+      </td>
+      <td onmouseover  = "showthumbnail('bruinicks.jpg',this)" onmouseout = "hidethumbnail(this)">
+           <p> 1:00 - 2:15 PM </p>
+           <p> CSCI 4061 Intro to Operating Systems </p>
+           <p> Lecture </p>
+      </td>
+      <td> <p> - </p>
+      </td>
+    </tr>
+    <tr>
+      <th> Fri </th>
+      <td> <p> - </p>
+      </td>
+      <td> <p> - </p>
+      </td>
+      <td> <p> - </p>
+      </td>
+    </tr>
+  </table>
+  <img src = "" id = 'billboard' alt = "Site Billboard">
+</body>
+</html>

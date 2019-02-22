@@ -1,0 +1,41 @@
+  nav {
+    background-color: #c8bfff;
+    height: 40px;
+  }
+  nav a {
+    line-height: 40px;
+    background-color: #9b0000;
+    color: white;
+    text-align: center;
+    border: 5px solid #45009b;
+  }
+  body {
+    background-color:  #11003f;
+  }
+  table, th, td {
+    border: 1px solid black;
+  }
+  th, td {
+    text-align: left;
+  }
+  th, td {
+    padding: 15px;
+  }
+  th {
+    background-color: blue;
+    color: white;
+  }
+  td {
+    background-color:  #00faff;
+    color: black;
+  }
+  button {
+    background-color: #00ff87;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }

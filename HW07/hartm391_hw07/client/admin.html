@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    	<meta charset="utf-8">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" type="text/css" href="client/css/style.css">
+	    <title>Events</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+           <div class="container-fluid">
+            <ul class="nav navbar-nav">
+            <li><a href="/"><b>Home</b></a></li>
+            <li><a href="/events"><b>Events Page</b></a></li>
+            <li><a href="/addEvents"><b>Add Events</b></a></li>
+            <li><a href="/admin"><b>Admin</b></a></li>
+            <li><a href="/logout"><b>Logout</b></a></li>
+            </ul>
+          </div>
+    </nav>
+    <div class="container">
+
+    <div class="row">
+      <p><br/></p>
+    </div>
+
+    <div class="container">
+      <table class="table" id="calendarTable">
+        <thead>
+          <tr>
+            <th scope="col">User name</th>
+            <th scope="col">User ID</th>
+            <th scope="col">New Password</th>
+          </tr>
+        </thead>
+        <tbody>
+        </tbody>
+      </table>
+    </div>
+    <script type = "text/javascript">
+      $(document).ready(function () {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (xhttp.readyState == 4 && xhttp.status == 200) {
+            var populate = JSON.parse(xhttp.responseText);
+            for (var k = 0; k < populate.length; k++) {
+              $("#calendarTable").find('tbody').append(
+                '<tr id = \"row'
+                + k
+                + '\"><td>' + String(populate[k]['acc_name'])
+                + '</td><td>' + populate[k]['acc_login']
+                + '</td><td> <input type=\"text\" class=\"form-control\" name=\"acc_password\" id =\"newpass'
+                + String(k)
+                + '\" required maxlength=\"30\">'
+                + '</td><td> <button type=\"button\" class=\"btn btn-default btn-sm\" onclick = \"openedit('
+                + String(k)
+                //\"edituser('
+                //+ String(populate[k]['acc_id']) + ','
+                //+ '\'' + String(populate[k]['acc_name']) + '\','
+                //+ '\'' + String(populate[k]['acc_login']) + '\','
+                //+ String(k)
+                + ')\"> <span class=\"glyphicon glyphicon-pencil\"></span></button>'
+                + '<button type=\"button\" class=\"btn btn-default btn-sm\" onclick = \"deleteuser('
+                + String(populate[k]['acc_id'])
+                + ')\"> <span class=\"glyphicon glyphicon-trash\"> </span></button>'
+                + '</td></tr>');
+            }
+          }
+        }
+        xhttp.open("GET", "/getListOfUsers", true);
+        xhttp.send();
+      });
+      function openedit(number) {
+        location.reload();
+
+      }
+      function edituser(id,name,login,number) {
+        //console.log(user);
+        //console.log($("#newpass" + number).val());
+        $.post('/edituser',
+        {
+          acc_id : id,
+          acc_name : name,
+          acc_login : login,
+          acc_pass : $("#newpass" + number).val()
+        });
+        location.reload(true);
+      }
+      function deleteuser(id) {
+        //console.log(user);
+        $.post('/deleteuser',
+        {
+          acc_id : id
+        });
+        location.reload(true);
+      }
+    </script>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <form name = "addUser" method = "post" action="/addUser">
+            <p></p>
+            <table class="table table-bordered table-hover">
+            <tbody>
+              <tr>
+                  <td class="col-md-6">User Name</td>
+                  <td class="col-md-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" name="acc_name" required maxlength="30">
+                    </div>
+                  </td>
+                  <td class="col-md-6">User ID</td>
+                  <td class="col-md-6">
+                    <div class="form-group">
+                     <input type="text" class="form-control" name="acc_login" required maxlength="30">
+                    </div>
+                  </td>
+                  <td class="col-md-6">Password</td>
+                  <td class="col-md-6">
+                    <div class="form-group">
+                     <input type="text" class="form-control" name="acc_password" required maxlength="30">
+                    </div>
+                  </td>
+                <td class="col-md-6"></td>
+                <td class="col-md-6">
+                  <input type="submit" value="Add User">
+                </td>
+              </tr>
+
+            </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  </body>
+</html>

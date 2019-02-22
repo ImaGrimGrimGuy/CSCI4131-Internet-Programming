@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "utf-8">
+  <title> My Widgets </title>
+  <link rel="stylesheet" type = "text/css" href = ./formatting.css>
+  <script type="text/javascript" src="./javascript.js"></script>
+</head>
+<body>
+  <nav>
+    <a href="./calendar.html">Schedule</a>
+    <a href="./form.html">Form Input</a>
+    <a href="./myWidgets.html">Widgets</a>
+  </nav>
+  <iframe width="500" height="350" src="https://www.youtube.com/embed/videoseries?list=PLJQVY_aKK17NQwa_qTibr5wigrFCUSUVY" allow="utoplay; encrypted-media" allowfullscreen></iframe>
+
+<div style="background-color:grey" id='tictactoe'>
+  <h3>Tic Tac Toe</h3>
+  <select name="Player">
+    <option>X</option>
+    <option>O</option>
+  </select>
+  <select name="selection" id = 'selection'>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    <option>6</option>
+    <option>7</option>
+    <option>8</option>
+    <option>9</option>
+  </select>
+  <input type="button" value="Make move" onclick="updateBoard()">
+  <input type="button" value="Reset" onclick="reset()">
+  <p><p>
+  <table id = 'gameboard'>
+    <tr>
+      <td>[ ]</td>
+      <td>[ ]</td>
+      <td>[ ]</td>
+    </tr>
+    <tr>
+      <td>[ ]</td>
+      <td>[ ]</td>
+      <td>[ ]</td>
+    </tr>
+    <tr>
+      <td>[ ]</td>
+      <td>[ ]</td>
+      <td>[ ]</td>
+    </tr>
+  </table>
+</div>
+
+<a class="twitter-timeline" href="https://twitter.com/TwitterDev/timelines/539487832448843776?ref_src=twsrc%5Etfw">National Park Tweets - Curated tweets by TwitterDev</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+</body>
+</html>

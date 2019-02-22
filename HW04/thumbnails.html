@@ -1,0 +1,42 @@
+<!DOCTYPE HTML><html><head><meta charset="UTF-8">
+<title>Popuptest</title>
+<style type="text/css">
+/* ------------- CSS Popup Image ------------- */
+#thumbwrap {
+position:relative;
+width:252px;
+height:252px;
+}
+.thumb img {
+border:1px solid #000;
+margin:3px;
+float:left;
+}
+.thumb span {
+position:absolute;
+visibility:hidden;
+}
+.thumb:hover, .thumb:hover span {
+visibility:visible;
+top:0;
+left:250px;
+z-index:1;
+}
+</style> 
+</head>
+
+<body>
+<div id="thumbwrap">
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+<a class="thumb" href="#"><img src="./cat.jpg" alt=""><span><img src="./cat.jpg" alt=""></span></a>
+</div>
+
+</body>
+</html>

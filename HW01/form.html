@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset = "utf-8">
+  <title> Form Input </title>
+  <link rel="stylesheet" type = "text/css" href = ./formatting.css>
+</head>
+<body>
+  <nav>
+    <a href="./calendar.html">Schedule</a>
+    <a href="./form.html">Form Input</a>
+    <a href="./myWidgets.html">Widgets</a>
+  </nav>
+  <form action="http://www-users.cs.umn.edu/~shaw0162/index.php" method="get">
+    <table>
+      <tr>
+        <th>
+          Event Name
+        </th>
+        <td>
+          <input type="text" name="eventname">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Start Time
+        </th>
+        <td>
+          <input type="time" name="starttime">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          End Time
+        </th>
+        <td>
+          <input type="time" name="endtime">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Location
+        </th>
+        <td>
+          <input type="text" name="location">
+        </td>
+      </tr>
+      <tr>
+        <th>
+          Day of the Week
+        </th>
+        <td>
+          <select name="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Tursday">Thursday</option>
+            <option value="Friday">Friday</option>
+          </select>
+        </td>
+      </tr>
+    </table>
+    <br><br>
+    <button type="submit">Submit</button>
+  </form>
+</body>
